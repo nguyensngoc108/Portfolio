@@ -1,0 +1,47 @@
+
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --navbar-bg: #f8f9fa;
+    --button-bg: #007bff;
+    --button-color: #fff;
+}
+
+
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #f8f9fa;
+    --navbar-bg: #343a40;
+    --button-bg: #28a745;
+    --button-color: #000;
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+}
+
+.btn {
+    background-color: var(--button-bg);
+    color: var(--button-color);
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+blockquote-footer {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-color);
+}
