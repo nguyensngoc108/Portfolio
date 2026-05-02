@@ -1,0 +1,211 @@
+{
+  "Bio": {
+    "description": "Enthusiastic and results-driven Software Developer with 3 years of hands-on experience in backend development, API design, AI research, and database management. Passionate about delivering scalable and efficient solutions to the stakeholders.",
+    "github": "https://github.com/nguyensngoc108",
+    "linkedin": "https://www.linkedin.com/in/dhnyn1008/",
+    "name": "Doan Huu Nguyen",
+    "portalLink": "https://github.com/nguyensngoc108",
+    "resume": "https://blue-wave-904.linkyhost.com",
+    "roles": [
+      "Software Developer",
+      "Backend Developer"
+    ]
+  },
+
+  "experiences": {
+    "exp1": {
+      "id": "exp1",
+      "role": "Software Developer",
+      "company": "Alpaca Solutions",
+      "date": "April 2025 - Present",
+      "img": "PASTE_ALPACA_LOGO_URL_HERE",
+      "link": "https://alpacasoultions.com",
+      "bullets": [
+        "Architected a comprehensive insurance management ecosystem for AXA France, delivering a modular frontend and high-performance backend that streamlined the end-to-end policy lifecycle—from initial risk assessment to final contract issuance.",
+        "Designed and implemented scalable system architecture and data models aligned with business requirements.",
+        "Built dynamic UI components and backend logic using Django to support complex workflows.",
+        "Developed and integrated serverless functions using AWS Lambda to handle business logic and automation processes.",
+        "Ensured code quality through testing, debugging, and optimization of existing features."
+      ],
+      "keyAccomplishments": [
+        "Successfully delivered multiple insurance web platforms used for quotation and client management.",
+        "Designed and implemented reusable components and logic that improved development efficiency across projects.",
+        "Contributed to improving system reliability and user experience through continuous enhancements and bug fixes, delivered 70% of the tasks on time through Jira.",
+        "Engineered and optimized a hybrid database strategy using MongoDB and relational models; refactored query structures and indexing to maintain sub-second response times as data volume upscaled by 35%."
+      ],
+      "skills": ["Django", "Python", "AWS Lambda", "MongoDB", "REST API", "JavaScript", "Jira"]
+    },
+    "exp2": {
+      "id": "exp2",
+      "role": "Outsourcing Backend Developer",
+      "company": "SaiGonTV",
+      "date": "February 2024 - August 2024",
+      "img": "PASTE_SAIGONTV_LOGO_URL_HERE",
+      "link": "https://saigontv.vn",
+      "bullets": [
+        "Developed a multi-purpose, SEO-friendly online news platform with a content management system using TypeScript, React, and the Bun runtime, enabling efficient content publishing and management.",
+        "Designed a scalable relational database architecture for the news platform, ensuring data integrity and performance, and containerized the system setup using Docker for reliable deployment.",
+        "Consulted with stakeholders on the business plan and provided technical guidance to the development team, aligning the solution with the project requirements and ensuring seamless collaboration."
+      ],
+      "skills": ["TypeScript", "React", "Bun", "Docker", "PostgreSQL", "REST API"]
+    },
+    "exp3": {
+      "id": "exp3",
+      "role": "Web Developer",
+      "company": "Ezin Insurance Tech",
+      "date": "June 2023 - March 2024",
+      "img": "PASTE_EZIN_LOGO_URL_HERE",
+      "link": "#",
+      "bullets": [
+        "Developed and maintained backend services, ensuring seamless integration with frontend applications.",
+        "Designed and optimized database schema.",
+        "Built RESTful APIs with ExpressJS to handle authentication, transactions, and user interactions.",
+        "Implemented automated testing using Jest and Jasmine.",
+        "Managed server infrastructure, optimizing uptime and security."
+      ],
+      "keyAccomplishments": [
+        "Led a database restructuring initiative that improved system scalability.",
+        "Improved the response time of the web application by 30%.",
+        "Mentored junior developers on best coding practices."
+      ],
+      "skills": ["ExpressJS", "JavaScript", "Node.js", "Jest", "Jasmine", "REST API", "SQL"]
+    }
+  },
+
+  "education": [
+    {
+      "id": "edu1",
+      "school": "International University | National University, HCMC",
+      "degree": "Bachelor of Science — Information Technology",
+      "date": "August 2020 - March 2025",
+      "img": "https://logo.clearbit.com/hcmiu.edu.vn",
+      "grade": "GPA 3.0 / 4.0",
+      "desc": "Coursework: Object-Oriented Programming, Computer Networks, Web Application Development, Principles of Database Management, Algorithm and Data Structure, Software Engineering. Participated in IU Hackathon 2024 (2nd prize). Conducted research in Computer Vision — face detection using CNNs, Haar cascades, MTCNN, RetinaFace, and YOLO. Completed IBM Backend Development certification on Coursera."
+    }
+  ],
+
+   "achievements": [
+      {
+      "id": "ach1",
+      "title": "IU Hackathon 2024",
+      "subtitle": "International University, HCMC",
+      "date": "2024",
+      "badge": "2nd Prize",
+      "img": "https://logo.clearbit.com/hcmiu.edu.vn",
+      "desc": "Participated in a 24-hour coding contest that challenged competitors to plan and develop innovative applications from scratch. Demonstrated adaptability and the ability to deliver a working product under pressure, securing 2nd place out of all competing teams.",
+      "achievementImage": "https://ibb.co/xyhLZKZ"
+    },
+    {
+      "id": "ach2",
+      "title": "Computer Vision Research",
+      "subtitle": "International University, HCMC",
+      "date": "2023 - 2024",
+      "badge": "Research",
+      "img": "https://logo.clearbit.com/hcmiu.edu.vn",
+      "desc": "Conducted academic research in the field of Computer Vision, focusing on face detection using deep learning-based methods including CNNs, Haar cascades, MTCNN, RetinaFace, and YOLO. Compared model accuracy and performance across different detection approaches.",
+      "achievementImage": "PASTE_CV_RESEARCH_PROOF_IMAGE_URL_HERE"
+    },
+    {
+      "id": "ach3",
+      "title": "IBM Backend Development",
+      "subtitle": "Coursera — IBM",
+      "date": "2023",
+      "badge": "Certification",
+      "img": "https://logo.clearbit.com/ibm.com",
+      "desc": "Completed a professional certification in backend development offered by IBM on Coursera. Covered RESTful API design, server-side development, database management, and deployment best practices.",
+      "achievementImage": "https://www.coursera.org/account/accomplishments/verify/IP35LMPKBPDB"
+    }
+  ],
+
+  "projects": {
+    "proj1": {
+      "id": "proj1",
+      "title": "EmoPal — AI Therapy Platform",
+      "date": "2025",
+      "category": "Web App",
+      "ontop": 1,
+      "rank": 1,
+      "image": "PASTE_EMOPAL_SCREENSHOT_URL_HERE",
+      "tags": ["React.js", "Django REST", "MongoDB", "WebRTC", "WebSocket", "ResEmoteNet", "Agora SDK"],
+      "description": "Full-stack mobile-responsive web app for remote therapy with real-time Facial Emotion Recognition powered by a custom ResEmoteNet model. Features live video sessions, emotion analytics dashboards, and role-based access for therapists and clients.",
+      "github": "",
+      "webapp": "",
+      "member": [
+        {
+          "name": "Doan Huu Nguyen",
+          "img": "PASTE_YOUR_AVATAR_URL_HERE",
+          "github": "https://github.com/nguyensngoc108",
+          "linkedin": "PASTE_YOUR_LINKEDIN_URL_HERE"
+        }
+      ]
+    },
+    "proj2": {
+      "id": "proj2",
+      "title": "S2UGAR — Cake Sales Website",
+      "date": "2025",
+      "category": "Web App",
+      "ontop": 1,
+      "rank": 2,
+      "image": "PASTE_S2UGAR_SCREENSHOT_URL_HERE",
+      "tags": ["React 18", "Node.js", "Express.js", "MongoDB", "JWT", "Nodemailer", "Cloudinary"],
+      "description": "Full-stack e-commerce platform for selling homemade cakes. Customers can browse, place custom orders, and receive email confirmations. Admins manage the catalog and receive order notifications. Integrated AI chatbot for customer care and product recommendations.",
+      "github": "",
+      "webapp": "",
+      "member": [
+        {
+          "name": "Doan Huu Nguyen",
+          "img": "PASTE_YOUR_AVATAR_URL_HERE",
+          "github": "https://github.com/nguyensngoc108",
+          "linkedin": "PASTE_YOUR_LINKEDIN_URL_HERE"
+        }
+      ]
+    }
+  },
+
+  "skills": [
+    {
+      "title": "Languages",
+      "skills": [
+        { "name": "JavaScript", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+        { "name": "Python", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { "name": "TypeScript", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+        { "name": "Java", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" }
+      ]
+    },
+    {
+      "title": "Frontend",
+      "skills": [
+        { "name": "React", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+        { "name": "HTML5", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+        { "name": "CSS3", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" }
+      ]
+    },
+    {
+      "title": "Backend",
+      "skills": [
+        { "name": "Node.js", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+        { "name": "ExpressJS", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+        { "name": "Django", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" }
+      ]
+    },
+    {
+      "title": "Databases",
+      "skills": [
+        { "name": "MongoDB", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+        { "name": "MySQL", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+        { "name": "PostgreSQL", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" }
+      ]
+    },
+    {
+      "title": "DevOps & Tools",
+      "skills": [
+        { "name": "Docker", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+        { "name": "AWS Lambda", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+        { "name": "Git", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { "name": "Jira", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
+        { "name": "Postman", "image": "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+        { "name": "Figma", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
+      ]
+    }
+  ]
+}

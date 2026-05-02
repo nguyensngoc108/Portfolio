@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaGithub } from "react-icons/fa"; 
 import { RiHeartAddFill } from "react-icons/ri";
 
-const githubsponslink = 'https://github.com/sponsors/sibisiddharth8';
+const githubsponslink = 'https://github.com/nguyensngoc108';
 
 const Button = styled.button`
     display: none;
@@ -201,26 +201,13 @@ const ProjectCards = ({ project, setOpenModal }) => {
                 />
                 {isLoading && <Loader />}
             </ImageWrapper>
-            <Tags>
-                {project.tags?.map((tag, index) => (
-                    <Tag key={index}>{tag}</Tag>
-                ))}
-            </Tags>
             <Details>
                 <Title id={`project-title-${project.id}`}>{project.title}</Title>
                 <Date dateTime={project.date}>{project.date}</Date>
                 <Description>{project.description}</Description>
             </Details>
             <CardDataHolder>
-                <Members>
-                    {project.member?.map((member, index) => (
-                        <Avatar
-                            key={index}
-                            src={member.img}
-                            alt={`Profile of ${member.name}`}
-                        />
-                    ))}
-                </Members>
+                <div />
                 <CardIcons>
                     {project?.github && (
                         <SocialMediaIcon

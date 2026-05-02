@@ -100,7 +100,7 @@ const ExperienceTimeline = () => {
                     <TimelineConnector style={{ background: '#854CE6' }} />
                   )}
                 </TimelineSeparator>
-                <TimelineContent>
+                <TimelineContent component="div">
                   <ExperienceCard experience={experience} />
                 </TimelineContent>
               </TimelineItem>

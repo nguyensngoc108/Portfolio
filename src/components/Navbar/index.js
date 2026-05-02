@@ -66,7 +66,7 @@ const Navbar = ({ navbarData, sections }) => {
     <Nav className={scrollDirection === 'down' ? 'hidden' : ''} ref={navbarRef}>
       <NavbarContainer>
           <a href={navbarData?.portalLink} target='_blank' style={{ display: "flex", alignItems: "center", color: "white", cursor: 'pointer', textDecoration: 'none'}}>
-            <Span>MyMind</Span>
+            <Span>Nguyen's Portfolio</Span>
           </a>
         <MobileIcon aria-label="Open mobile menu">
           <FaBars onClick={() => setIsOpen(!isOpen)} />

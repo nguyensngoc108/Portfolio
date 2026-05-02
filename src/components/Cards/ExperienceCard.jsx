@@ -1,50 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-
-const Document = styled.img`
-    display: none;
-    height: 70px;
-    width: fit-content;
-    background-color: #000;
-    border-radius: 10px;
-    &:hover {
-        cursor: pointer;
-        opacity: 0.8;
-    }
-`;
-
-const Description = styled.p`
-    width: 100%;
-    font-size: 15px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_primary + 99};
-    margin-bottom: 10px;
-    @media only screen and (max-width: 768px) {
-        font-size: 12px;
-    }
-`;
-
-const Span = styled.span`
-    overflow: hidden;
-    display: -webkit-box;
-    max-width: 100%;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-`;
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const Card = styled.article`
     width: 650px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
     padding: 12px 16px;
-    justify-content: space-between;
     position: relative;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 12px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
     &:hover {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
         transform: translateY(-5px);
@@ -58,13 +26,6 @@ const Card = styled.article`
         width: 290px;
         padding: 12px 8px;
     }
-    &:hover ${Document} {
-        display: block;
-    }
-    &:hover ${Span} {
-        overflow: visible;
-        -webkit-line-clamp: unset;
-    }
     border: 0.1px solid #306EE8;
 `;
 
@@ -72,6 +33,15 @@ const Top = styled.header`
     width: 100%;
     display: flex;
     gap: 12px;
+    align-items: flex-start;
+    justify-content: space-between;
+`;
+
+const TopLeft = styled.div`
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    flex: 1;
 `;
 
 const Image = styled.img`
@@ -117,11 +87,69 @@ const Date = styled.p`
     }
 `;
 
+const ChevronIcon = styled.div`
+    color: ${({ theme }) => theme.text_secondary};
+    margin-top: 4px;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+    &:hover {
+        color: ${({ theme }) => theme.primary};
+    }
+`;
+
+const Details = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    max-height: ${({ open }) => (open ? '1000px' : '0')};
+    opacity: ${({ open }) => (open ? '1' : '0')};
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+`;
+
+const BulletList = styled.ul`
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+`;
+
+const BulletItem = styled.li`
+    font-size: 14px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.text_primary + 99};
+    line-height: 1.5;
+    @media only screen and (max-width: 768px) {
+        font-size: 12px;
+    }
+`;
+
+const SectionLabel = styled.p`
+    font-size: 13px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.text_secondary};
+    margin-top: 4px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    @media only screen and (max-width: 768px) {
+        font-size: 11px;
+    }
+`;
+
 const Skills = styled.section`
     width: 100%;
     display: flex;
-    gap: 12px;
-    margin-top: -10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+`;
+
+const SkillsLabel = styled.b`
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
 `;
 
 const ItemWrapper = styled.div`
@@ -130,54 +158,83 @@ const ItemWrapper = styled.div`
     gap: 8px;
 `;
 
-const Skill = styled.p`
-    font-size: 15px;
+const Skill = styled.span`
+    font-size: 13px;
     font-weight: 400;
     color: ${({ theme }) => theme.text_primary + 99};
     @media only screen and (max-width: 768px) {
-        font-size: 12px;
+        font-size: 11px;
     }
 `;
 
 const ExperienceCard = ({ experience }) => {
+    const [open, setOpen] = useState(false);
+    const bullets = experience?.bullets || [];
+    const keyAccomplishments = experience?.keyAccomplishments || [];
+    const hasDetails = bullets.length > 0 || keyAccomplishments.length > 0;
+
+    const isPlaceholder = (url) =>
+        !url || url.startsWith('PASTE_');
+
     return (
         <Card
+            onClick={() => hasDetails && setOpen(prev => !prev)}
             aria-labelledby={`experience-card-${experience.id}`}
-            role="region"
+            aria-expanded={open}
+            role="button"
             aria-label={`Experience at ${experience.company}`}
         >
             <Top>
-                <a href={experience.link} target="_blank" rel="noopener noreferrer">
-                    <Image 
-                        src={experience.img} 
-                        alt={`Logo for ${experience.role} role at ${experience.company} - Sibi Siddharth S`} 
-                    />
-                </a>
-                <Body>
-                    <Role>{experience.role}</Role>
-                    <Company>{experience.company}</Company>
-                    <Date>{experience.date}</Date>
-                </Body>
+                <TopLeft>
+                    {!isPlaceholder(experience?.img) && (
+                        <Image src={experience.img} alt={`${experience.company} logo`} />
+                    )}
+                    <Body>
+                        <Role>{experience.role}</Role>
+                        <Company>{experience.company}</Company>
+                        <Date>{experience.date}</Date>
+                    </Body>
+                </TopLeft>
+                {hasDetails && (
+                    <ChevronIcon>
+                        {open ? <FaChevronUp size={14} /> : <FaChevronDown size={14} />}
+                    </ChevronIcon>
+                )}
             </Top>
-            <Description>
-                {experience?.desc && <Span>{experience.desc}</Span>}
-                {experience?.skills && (
+
+            {experience?.skills && (
+                <Skills>
+                    <SkillsLabel>Skills:</SkillsLabel>
+                    <ItemWrapper>
+                        {experience.skills.map((skill, index) => (
+                            <Skill key={index}>• {skill}</Skill>
+                        ))}
+                    </ItemWrapper>
+                </Skills>
+            )}
+
+            <Details open={open}>
+                {bullets.length > 0 && (
+                    <BulletList>
+                        {bullets.map((item, index) => (
+                            <BulletItem key={index}>{item}</BulletItem>
+                        ))}
+                    </BulletList>
+                )}
+
+                {keyAccomplishments.length > 0 && (
                     <>
-                        <br />
-                        <Skills>
-                            <b>Skills:</b>
-                            <ItemWrapper>
-                                {experience.skills.map((skill, index) => (
-                                    <Skill key={index}>• {skill}</Skill>
-                                ))}
-                            </ItemWrapper>
-                        </Skills>
+                        <SectionLabel>Key Accomplishments</SectionLabel>
+                        <BulletList>
+                            {keyAccomplishments.map((item, index) => (
+                                <BulletItem key={index}>{item}</BulletItem>
+                            ))}
+                        </BulletList>
                     </>
                 )}
-            </Description>
+            </Details>
         </Card>
     );
 };
 
 export default ExperienceCard;
-

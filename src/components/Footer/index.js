@@ -4,7 +4,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GetAppIcon from '@mui/icons-material/GetApp';
 import { GitHub } from '@mui/icons-material';
-import logo from '../../images/MyLogo.png';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
 
 const FooterContainer = styled.div`
@@ -131,10 +130,6 @@ const Footer = ({ footerData, links=[] }) => {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <a href="">
-          <LogoImg src={logo} alt="Sibi Siddharth S Logo MyMind" />
-        </a>
-        <Logo>Sibi Siddharth S</Logo>
         <Nav>
           {links.map((link, index) => (
             <NavLink
@@ -164,21 +159,9 @@ const Footer = ({ footerData, links=[] }) => {
           >
             <LinkedInIcon />
           </SocialMediaIcon>
-          <SocialMediaIcon
-            href={footerData?.insta || '#'}
-            target="_blank"
-            aria-label="Instagram profile"
-          >
-            <InstagramIcon />
-          </SocialMediaIcon>
-          {deferredPrompt && (
-            <InstallIconWrapper onClick={handleInstallClick} aria-label="Install App">
-              <GetAppIcon />
-            </InstallIconWrapper>
-          )}
         </SocialMediaIcons>
         <Copyright>
-          &copy; {new Date().getFullYear()} Sibi Siddharth S. All rights reserved.
+          &copy; {new Date().getFullYear()} Doan Huu Nguyen. All rights reserved.
         </Copyright>
       </FooterWrapper>
     </FooterContainer>

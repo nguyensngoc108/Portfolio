@@ -84,31 +84,25 @@ const TermsandConditions = ({firebaseData}) => {
     <>
     <Helmet>
     {/* Title */}
-    <title>Terms & Conditions | Sibi Siddharth S Portfolio</title>
+    <title>Terms & Conditions | Doan Huu Nguyen Portfolio</title>
 
     {/* Meta Tags */}
     <meta charset="utf-8" />
-    <meta name="author" content="Sibi Siddharth S" />
-    <meta name="description" content="Read the Terms & Conditions for using Sibi Siddharth S's portfolio website and understand the guidelines around intellectual property, website use, and content ownership." />
-    <meta name="keywords" content="Terms & Conditions, Sibi Siddharth S, Portfolio, Website Policy, Intellectual Property, Use of Website, MyMind" />
+    <meta name="author" content="Doan Huu Nguyen" />
+    <meta name="description" content="Read the Terms & Conditions for using Doan Huu Nguyen's portfolio website and understand the guidelines around intellectual property, website use, and content ownership." />
+    <meta name="keywords" content="Terms & Conditions, Doan Huu Nguyen, Portfolio, Website Policy, Intellectual Property" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
 
-    {/* Canonical URL */}
-    <link rel="canonical" href="https://sibisiddharth8.github.io/portfolio-react/#/terms-and-conditions" />
-
     {/* Open Graph Data */}
-    <meta property="og:title" content="Terms & Conditions | Sibi Siddharth S Portfolio" />
+    <meta property="og:title" content="Terms & Conditions | Doan Huu Nguyen Portfolio" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sibisiddharth8.github.io/portfolio-react/#/terms-and-conditions" />
-    <meta property="og:image" content="https://sibisiddharth8.github.io/portfolio-react/Og-card-banner-SibiSiddharthS.png" />
-    <meta property="og:description" content="Read the Terms & Conditions for using Sibi Siddharth S's portfolio website." />
+    <meta property="og:description" content="Read the Terms & Conditions for using Doan Huu Nguyen's portfolio website." />
 
     {/* Twitter Card Data */}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Terms & Conditions | Sibi Siddharth S Portfolio" />
-    <meta name="twitter:description" content="Read the Terms & Conditions for using Sibi Siddharth S's portfolio website." />
-    <meta name="twitter:image" content="https://sibisiddharth8.github.io/portfolio-react/Og-card-banner-SibiSiddharthS.png" />
+    <meta name="twitter:title" content="Terms & Conditions | Doan Huu Nguyen Portfolio" />
+    <meta name="twitter:description" content="Read the Terms & Conditions for using Doan Huu Nguyen's portfolio website." />
   </Helmet>
     <ThemeProvider theme={darkTheme}>
       <Body>
@@ -121,7 +115,7 @@ const TermsandConditions = ({firebaseData}) => {
 
           <h2>2. Intellectual Property</h2>
           <p>
-            All content on this website, including text, images, graphics, and code, is the intellectual property of <BoldText>Sibi Siddharth S</BoldText> unless otherwise stated. Unauthorized use, reproduction, or distribution of this material is prohibited without explicit permission.
+            All content on this website, including text, images, graphics, and code, is the intellectual property of <BoldText>Doan Huu Nguyen</BoldText> unless otherwise stated. Unauthorized use, reproduction, or distribution of this material is prohibited without explicit permission.
           </p>
 
           <h2>3. Use of Website</h2>
@@ -142,12 +136,12 @@ const TermsandConditions = ({firebaseData}) => {
 
           <h2>5. Limitation of Liability</h2>
           <p>
-            The content provided on this website is for informational purposes only. While every effort is made to ensure accuracy, <BoldText>Sibi Siddharth S</BoldText> makes no guarantees or warranties of any kind regarding the completeness, reliability, or suitability of the information on the site.
+            The content provided on this website is for informational purposes only. While every effort is made to ensure accuracy, <BoldText>Doan Huu Nguyen</BoldText> makes no guarantees or warranties of any kind regarding the completeness, reliability, or suitability of the information on the site.
           </p>
 
           <h2>6. External Links</h2>
           <p>
-            This website may contain links to external websites. <BoldText>Sibi Siddharth S</BoldText> is not responsible for the content or practices of any linked websites and does not endorse the content of these external sites.
+            This website may contain links to external websites. <BoldText>Doan Huu Nguyen</BoldText> is not responsible for the content or practices of any linked websites and does not endorse the content of these external sites.
           </p>
 
           <h2>7. Privacy Policy</h2>
@@ -162,7 +156,7 @@ const TermsandConditions = ({firebaseData}) => {
 
           <h2>9. Governing Law</h2>
           <p>
-            These terms and conditions are governed by the laws of India, and any disputes arising will be subject to the jurisdiction of Indian courts.
+            These terms and conditions are governed by the laws of Vietnam, and any disputes arising will be subject to the jurisdiction of Vietnamese courts.
           </p>
 
           <h2>10. Contact Information</h2>

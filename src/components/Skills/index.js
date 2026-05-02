@@ -8,6 +8,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
+  padding-bottom: 80px;
 `;
 
 const Wrapper = styled.div`
@@ -128,7 +129,7 @@ const Skills = ({ skillsData }) => {
               <SkillList>
                 {skill.skills.map((item, i) => (
                   <SkillItem key={i}>
-                    <SkillImage src={item.image} alt={`${item.name} - Sibi Siddharth S skills`} />
+                    <SkillImage src={item.image} alt={`${item.name} - Doan Huu Nguyen skills`} />
                     {item.name}
                   </SkillItem>
                 ))}

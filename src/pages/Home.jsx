@@ -6,7 +6,8 @@ import Experience from '../components/Experience';
 import EducationTimeline from '../components/Education';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import ProjectDetails from '../components/ProjectDetails'; 
+import ProjectDetails from '../components/ProjectDetails';
+import Achievements from '../components/Achievements';
 import styled from "styled-components";
 import { Helmet } from 'react-helmet';
 
@@ -24,15 +25,14 @@ const Home = ({ firebaseData, openModal, setOpenModal }) => {
   return (
     <>
       <Helmet>
-        <title>Sibi Siddharth S | AI/ML & Web Developer Portfolio</title>
-        <meta name="description" content="Welcome to the portfolio of Sibi Siddharth S, showcasing skills, projects, and experiences in AI/ML and Web Development." />
-        <meta name="keywords" content="MyMind, Sibi Siddharth S, Machine Learning, Python Developer, Frontend Developer, Fullstack Developer, Squad of Creators, Portfolio" />
-        <link rel="canonical" href="https://sibisiddharth8.github.io/portfolio-react/" />
+        <title>Doan Huu Nguyen | Software Developer Portfolio</title>
+        <meta name="description" content="Welcome to the portfolio of Doan Huu Nguyen, a Software Developer with 3 years of experience in backend development, API design, and web applications." />
+        <meta name="keywords" content="Doan Huu Nguyen, Software Developer, Backend Developer, JavaScript, Python, React, ExpressJS, Django, Portfolio" />
       </Helmet>
 
-      <Navbar 
-        navbarData={firebaseData.Bio || {}} 
-        sections={['About', 'Skills', 'Experience', 'Projects', 'Education']} 
+      <Navbar
+        navbarData={firebaseData.Bio || {}}
+        sections={['About', 'Experience', 'Education', 'Skills', 'Projects', 'Achievements']}
       />
 
       <HeroSection 
@@ -40,35 +40,41 @@ const Home = ({ firebaseData, openModal, setOpenModal }) => {
       />
 
       <Wrapper>
-        <Skills 
-          skillsData={firebaseData.skills || []} 
-        />
         <Experience />
+        <EducationTimeline
+          education={firebaseData.education || []}
+        />
+      </Wrapper>
+
+      <Wrapper>
+        <Skills
+          skillsData={firebaseData.skills || []}
+        />
       </Wrapper>
 
       <Suspense>
-        <Projects 
-          projectsData={firebaseData.projects || []} 
-          openModal={openModal} 
-          setOpenModal={setOpenModal} 
+        <Projects
+          projectsData={firebaseData.projects || []}
+          openModal={openModal}
+          setOpenModal={setOpenModal}
           defaultfilter="top"
           AllCard={1}
-          projectFilters={null} 
+          projectFilters={null}
           ShowTitle={true}
           IntroText={true}
         />
       </Suspense>
 
       <Wrapper>
-        <EducationTimeline 
-          education={firebaseData.education || []} 
+        <Achievements
+          achievementsData={firebaseData.achievements || []}
         />
         <Contact />
       </Wrapper>
       
-      <Footer 
-        footerData={firebaseData.Bio || {}} 
-        links={["About", "Skills", "Experience", "Projects", "Education"]} 
+      <Footer
+        footerData={firebaseData.Bio || {}}
+        links={["About", "Experience", "Education", "Skills", "Projects", "Achievements"]}
       />
 
       {openModal.state && (

@@ -23,7 +23,8 @@ const App = () => {
     Bio: null,
     skills: null,
     projects: null,
-    education: null
+    education: null,
+    achievements: null
   });
 
   useEffect(() => {
@@ -45,9 +46,10 @@ const App = () => {
 
     const projectsRef = ref(database, "/projects");
     onValue(projectsRef, (snapshot) => {
+      const val = snapshot.val();
       setFirebaseData(prevData => ({
         ...prevData,
-        projects: snapshot.val()
+        projects: val ? Object.values(val) : []
       }));
     });
 
@@ -56,6 +58,14 @@ const App = () => {
       setFirebaseData(prevData => ({
         ...prevData,
         education: snapshot.val()
+      }));
+    });
+
+    const achievementsRef = ref(database, "/achievements");
+    onValue(achievementsRef, (snapshot) => {
+      setFirebaseData(prevData => ({
+        ...prevData,
+        achievements: snapshot.val()
       }));
     });
   }, []);
